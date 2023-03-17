@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
+    'auth'
 ]
 
 MIDDLEWARE = [
@@ -47,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'pharmacy.urls'
@@ -121,3 +126,22 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# this section for cors allow header 
+CORS_ALLOW_ALL_ORIGINS=True
+
+CORS_ALLOW_METHODS= [
+    'DELETE',
+    'GET',
+    'PATCH',
+    'POST'
+]
+
+CORS_ALLOW_HEADERS= [
+    'authorization',
+    'accept',
+    'content-type'
+]
+
+CORS_ALLOWED_ORIGINS= ['*']
