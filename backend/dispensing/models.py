@@ -17,7 +17,7 @@ class Dispensing(models.Model):
 
 class SoldDrug(models.Model):
     id= models.UUIDField(primary_key=True)
-    sold_quantity= models.IntegerField(min=1)
+    sold_quantity= models.IntegerField()
     sell_price= models.FloatField(default=0.0)
     dispensing_id= models.ForeignKey(Dispensing, on_delete=models.CASCADE)
     store_stock_id= models.ForeignKey(StoreStock, on_delete=models.CASCADE)

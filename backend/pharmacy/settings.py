@@ -50,7 +50,16 @@ INSTALLED_APPS = [
     'user',
     'responsibilities',
     'drug',
-    'store'
+    'store',
+    'stock',
+    'shelf',
+    'userstore',
+    'supplier',
+    'purchaseorder',
+    'purchasedrug',
+    'dispensing',
+    'storerequest',
+    'storetransfer'
 ]
 
 AUTH_USER_MODEL = 'user.User'

@@ -15,7 +15,7 @@ class StockRequest(models.Model):
 class RequestDrug(models.Model):
     id= models.UUIDField(primary_key=True)
     drug_id= models.ForeignKey(Drug, on_delete=models.CASCADE)
-    request_drug_quantity= models.IntegerField(min=1)
+    request_drug_quantity= models.IntegerField()
     request_status= models.BooleanField(default=True)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
