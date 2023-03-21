@@ -21,3 +21,6 @@ class SoldDrug(models.Model):
     sell_price= models.FloatField(default=0.0)
     dispensing_id= models.ForeignKey(Dispensing, on_delete=models.CASCADE)
     store_stock_id= models.ForeignKey(StoreStock, on_delete=models.CASCADE)
+    created_at=models.DateTimeField(auto_now_add=True)
+    updated_at=models.DateTimeField(auto_now=True)
+    
