@@ -24,4 +24,11 @@ class StoreStock(models.Model):
     store_quantity= models.IntegerField(min=1)
     store_id = models.ForeignKey(Store, on_delete=models.CASCADE)
     stock_id = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    created_at=models.DateTimeField(auto_now_add=True)
+    updated_at=models.DateTimeField(auto_now=True)
+    
+
+    def __str__(self):
+        return self.store_quantity
+
     
