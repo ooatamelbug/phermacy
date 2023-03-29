@@ -22,7 +22,6 @@ class UserResponsibilities(models.Model):
     id=models.UUIDField(primary_key=True, default=uuid4)
     user_id= models.ForeignKey(User, on_delete=models.CASCADE)
     resp_id= models.ForeignKey(Responsibilities, on_delete=models.CASCADE)
-    
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     status= models.BooleanField(default=True)

@@ -3,5 +3,5 @@ from .models import Drug
 
 class UserSerializers(serializers.Serializer):
     class Meta:
-        model: Drug
-        fields: '__all__'
+        model= Drug
+        fields= '__all__'

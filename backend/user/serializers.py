@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import User
 
-class UserSerializers(serializers.Serializer):
+class UserSerializers(serializers.ModelSerializer):
     class Meta:
-        model: User
-        fields: '__all__'
+        model = User
+        exclude = ['password']
