@@ -6,7 +6,7 @@ from stock.models import StoreStock
 
 
 class Dispensing(models.Model):
-    id= models.UUIDField(primary_key=True)
+    id= models.IntegerField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     store_id = models.ForeignKey(Store, on_delete=models.CASCADE)
     total_price= models.FloatField(default=0.0)
@@ -16,7 +16,7 @@ class Dispensing(models.Model):
 
 
 class SoldDrug(models.Model):
-    id= models.UUIDField(primary_key=True)
+    id= models.IntegerField(primary_key=True)
     sold_quantity= models.IntegerField()
     sell_price= models.FloatField(default=0.0)
     dispensing_id= models.ForeignKey(Dispensing, on_delete=models.CASCADE)

@@ -4,7 +4,7 @@ from purchaseorder.models import PurchaseOrder
 
 # Create your models here.
 class PurchaseDrug(models.Model):
-    purchase_drug_id=models.UUIDField(primary_key=True)
+    purchase_drug_id=models.IntegerField(primary_key=True)
     order_quantity=models.IntegerField()
     invoice_quantity= models.IntegerField()
     drug_cost= models.FloatField()

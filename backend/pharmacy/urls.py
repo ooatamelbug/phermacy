@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from auth import urls as authMoule
 from user import urls as userMoule
+from drug import urls as drugMoule
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include(authMoule)),
-    path('api/user/', include(userMoule))
+    path('api/user/', include(userMoule)),
+    path('api/drug/', include(drugMoule))
 ]

@@ -7,6 +7,10 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 # Create your views here.
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    
+    default_error_messages = {
+        'no_active_account': 'username or password is invalide'
+    }
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
@@ -14,6 +18,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['username'] = user.username
         token['id'] = user.id
 
+        
         return token
     
 

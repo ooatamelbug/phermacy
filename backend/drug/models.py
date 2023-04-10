@@ -12,7 +12,7 @@ class Classes(models.Model):
 
 
 class Drug(models.Model):
-    id= models.UUIDField(primary_key=True)
+    id= models.IntegerField(primary_key=True)
     en_brand_name= models.CharField(max_length=25)
     ar_brand_name= models.CharField(max_length=25)
     chemical_name= models.CharField(max_length=25)

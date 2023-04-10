@@ -2,7 +2,7 @@ from django.db import models
 from supplier.models import Supplier
 # Create your models here.
 class PurchaseOrder(models.Model):
-    order_id=models.UUIDField(primary_key=True)
+    order_id=models.IntegerField(primary_key=True)
     order_desc = models.TextField()
     order_status = models.IntegerField(default=0)
     invoice_number=models.IntegerField()

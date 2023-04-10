@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Store(models.Model):
-    id= models.UUIDField(primary_key=True)
+    id= models.IntegerField(primary_key=True)
     store_name=models.CharField(max_length=30)
     store_reg_no=models.CharField(max_length=30)
     store_location=models.CharField(max_length=30)

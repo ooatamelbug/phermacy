@@ -4,7 +4,7 @@ from store.models import Store
 # Create your models here.
 
 class UserStore(models.Model):
-    id= models.UUIDField(primary_key=True)
+    id= models.IntegerField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     store_id = models.ForeignKey(Store, on_delete=models.CASCADE)
     status= models.BooleanField(default=True)

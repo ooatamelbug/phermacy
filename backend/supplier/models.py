@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here
 class Supplier(models.Model):
-    supplier_id=models.UUIDField(primary_key=True)
+    supplier_id=models.IntegerField(primary_key=True)
     supplier_first_name=models.CharField(max_length=25)
     supplier_middle_name=models.CharField(max_length=25)
     supplier_last_name=models.CharField(max_length=25)
